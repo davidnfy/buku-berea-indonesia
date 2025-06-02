@@ -1,0 +1,28 @@
+.mySwiper .swiper-slide-active {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.mySwiper {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.mySwiper .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 220px;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mySwiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
