@@ -16,7 +16,7 @@ export default function AdminLayout({ children }) {
   const pathname = usePathname();
 
   const handleLogout = useCallback(() => {
-    // Simple logout: clear local admin flag (if any) and redirect
+
     try {
       localStorage.removeItem('admin');
     } catch (e) {}
