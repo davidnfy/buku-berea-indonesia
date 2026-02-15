@@ -5,7 +5,7 @@
 
 .mySwiper .swiper-slide {
   width: 240px;
-  height: 340px;
+  height: 360px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,28 +41,31 @@
 .book-card {
   background: #ffffff;
   border-radius: 16px;
-  padding: 20px;
+  padding: 26px;
   transition: all 0.3s ease;
+  min-height: 320px; /* DIPANJANGKAN */
 }
 
 .book-card:hover {
-  background-color: #e1e1e1;
+  background-color: #eaeaea;
   transform: translateY(-6px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
 .book-card-row {
   display: flex;
-  gap: 20px;
+  gap: 22px;
   align-items: flex-start;
+  width: 100%;
 }
 
 .book-card-cover .cover-wrap {
   position: relative;
-  width: 160px;
-  height: 230px;
+  width: 170px;   /* sedikit diperbesar */
+  height: 260px;  /* dipanjangkan */
   overflow: hidden;
   border-radius: 12px;
+  flex-shrink: 0;
 }
 
 .book-card-cover img {
@@ -98,9 +101,10 @@
 .view-btn {
   background: #ffffff;
   border: none;
-  padding: 10px 18px;
+  padding: 9px 16px;
   border-radius: 8px;
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 13px; /* diperkecil */
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -112,32 +116,36 @@
 
 .book-card-body {
   flex: 1;
+  min-width: 0;
 }
 
 .book-card-title {
-  font-size: 17px;
-  font-weight: 700;
+  font-size: 14px; /* diperkecil */
+  font-weight: 600;
   color: #0f172a;
   margin-bottom: 6px;
+  line-height: 1.5;
+  word-break: break-word;
 }
 
 .book-card-author {
   color: #00a88b;
-  font-size: 14px;
-  margin-bottom: 12px;
+  font-size: 12px; /* diperkecil */
+  margin-bottom: 10px;
+  word-break: break-word;
 }
 
 .book-card-price-old {
   color: #9ca3af;
   text-decoration: line-through;
-  font-size: 14px;
+  font-size: 12px; /* diperkecil */
   margin-right: 8px;
 }
 
 .book-card-price-new {
   color: #000000;
-  font-weight: 800;
-  font-size: 18px;
+  font-weight: 700;
+  font-size: 15px; /* diperkecil */
   margin-top: 4px;
 }
 
@@ -160,9 +168,8 @@
   }
 
   .book-card {
-    background: #ffffff;
-    border-radius: 16px;
-    padding: 20px;
+    padding: 24px;
+    min-height: 300px; 
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
   }
 
@@ -172,43 +179,16 @@
     background: #ffffff;
   }
 
-  .book-card-row {
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-  }
-
   .book-card-cover .cover-wrap {
     width: 150px;
-    height: 220px;
-  }
-
-  .book-card-cover img {
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  }
-
-  .cover-overlay {
-    background: rgba(0, 0, 0, 0.5);
-  }
-
-  .cover-wrap:active .cover-overlay {
-    opacity: 1;
-  }
-
-  .cover-wrap:active img {
-    filter: brightness(0.45);
-  }
-
-  .book-card-body {
-    text-align: left;
+    height: 240px;
   }
 
   .book-card-title {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .book-card-price-new {
-    font-size: 18px;
-    color: #000000;
+    font-size: 15px;
   }
 }
