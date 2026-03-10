@@ -12,12 +12,10 @@ export default function Navbar() {
 
     const handleScroll = () => {
       const currentScroll = window.scrollY;
-
       if (currentScroll <= 0) {
         setShowNavbar(true);
         return;
       }
-
       if (currentScroll > lastScroll) {
         setShowNavbar(false);
       } else {
@@ -44,11 +42,11 @@ export default function Navbar() {
             priority
           />
         </Link>
-
+        
         <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
           <li><Link href="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
           <li><Link href="/about" onClick={() => setMenuOpen(false)}>About Us</Link></li>
-          <li><Link href="/category" onClick={() => setMenuOpen(false)}>Book Category</Link></li>
+          <li><a href="/#books-section">Books Category</a></li>
           <li><Link href="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link></li>
         </ul>
 

@@ -2,6 +2,7 @@ import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import { Suspense } from "react";
 import "./globals.css";
 import Loader from "./components/Loader";
+import Footer from "./components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,6 +41,7 @@ export default function RootLayout({ children }) {
           <Loader />
         </Suspense>
         {children}
+        <Footer />
       </body>
     </html>
   );

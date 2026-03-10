@@ -43,7 +43,7 @@
   border-radius: 16px;
   padding: 26px;
   transition: all 0.3s ease;
-  min-height: 320px; /* DIPANJANGKAN */
+  min-height: 320px; 
 }
 
 .book-card:hover {
@@ -61,8 +61,8 @@
 
 .book-card-cover .cover-wrap {
   position: relative;
-  width: 170px;   /* sedikit diperbesar */
-  height: 260px;  /* dipanjangkan */
+  width: 170px;   
+  height: 260px; 
   overflow: hidden;
   border-radius: 12px;
   flex-shrink: 0;
@@ -104,7 +104,7 @@
   padding: 9px 16px;
   border-radius: 8px;
   font-weight: 600;
-  font-size: 13px; /* diperkecil */
+  font-size: 13px; 
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -120,8 +120,7 @@
 }
 
 .book-card-title {
-  font-size: 14px; /* diperkecil */
-  font-weight: 600;
+  font-size: 14px;
   color: #0f172a;
   margin-bottom: 6px;
   line-height: 1.5;
@@ -130,7 +129,7 @@
 
 .book-card-author {
   color: #00a88b;
-  font-size: 12px; /* diperkecil */
+  font-size: 12px;
   margin-bottom: 10px;
   word-break: break-word;
 }
@@ -138,14 +137,14 @@
 .book-card-price-old {
   color: #9ca3af;
   text-decoration: line-through;
-  font-size: 12px; /* diperkecil */
+  font-size: 12px;
   margin-right: 8px;
 }
 
 .book-card-price-new {
   color: #000000;
   font-weight: 700;
-  font-size: 15px; /* diperkecil */
+  font-size: 15px; 
   margin-top: 4px;
 }
 
