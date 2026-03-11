@@ -2,10 +2,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
+  const pathname = usePathname();
 
   useEffect(() => {
     let lastScroll = 0;
@@ -42,16 +44,33 @@ export default function Navbar() {
             priority
           />
         </Link>
-        
+
         <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
-          <li><Link href="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
-          <li><Link href="/about" onClick={() => setMenuOpen(false)}>About Us</Link></li>
-          <li><a href="/#books-section">Books Category</a></li>
-          <li><Link href="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link></li>
+          <li>
+            <Link href="/" className={pathname === "/" ? "active" : ""}>
+              Home
+            </Link>
+          </li>
+
+          <li>
+            <Link href="/about" className={pathname === "/about" ? "active" : ""}>
+              About Us
+            </Link>
+          </li>
+
+          <li>
+            <a href="/#books-section">Books Category</a>
+          </li>
+
+          <li>
+            <Link href="/contact" className={pathname === "/contact" ? "active" : ""}>
+              Contact Us
+            </Link>
+          </li>
         </ul>
 
-        <div 
-          className={`hamburger ${menuOpen ? "active" : ""}`} 
+        <div
+          className={`hamburger ${menuOpen ? "active" : ""}`}
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <span></span>

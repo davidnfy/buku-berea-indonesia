@@ -99,6 +99,11 @@ a {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
+.nav-links a:hover,
+.nav-links a.active {
+  color: #16edcc;
+}
+
 .nav-container {
   width: 100%;
   max-width: 1200px;
