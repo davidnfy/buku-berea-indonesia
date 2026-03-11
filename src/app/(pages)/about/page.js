@@ -9,7 +9,7 @@ export default function AboutPage() {
         <div className="about-container">
           <div className="about-image-wrap">
             <img
-              src="/assets/about.png"
+              src="/assets/about.webp"
               alt="Buku Berea Indonesia"
               className="about-image"
             />

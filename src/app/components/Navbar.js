@@ -37,7 +37,7 @@ export default function Navbar() {
 
         <Link href="/" className="logo">
           <Image
-            src="/assets/logo-berea.png"
+            src="/assets/logo-berea.webp"
             alt="Logo Berea"
             width={40}
             height={40}
