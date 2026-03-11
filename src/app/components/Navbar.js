@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -14,10 +15,12 @@ export default function Navbar() {
 
     const handleScroll = () => {
       const currentScroll = window.scrollY;
+
       if (currentScroll <= 0) {
         setShowNavbar(true);
         return;
       }
+
       if (currentScroll > lastScroll) {
         setShowNavbar(false);
       } else {
@@ -28,14 +31,22 @@ export default function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
+
+  const handleCloseMenu = () => {
+    setMenuOpen(false);
+  };
 
   return (
     <nav className={`navbar ${showNavbar ? "" : "hide"}`}>
       <div className="container nav-container">
 
-        <Link href="/" className="logo">
+        {}
+        <Link href="/" className="logo" onClick={handleCloseMenu}>
           <Image
             src="/assets/logo-berea.webp"
             alt="Logo Berea"
@@ -45,30 +56,51 @@ export default function Navbar() {
           />
         </Link>
 
+        {}
         <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
+
           <li>
-            <Link href="/" className={pathname === "/" ? "active" : ""}>
+            <Link
+              href="/"
+              className={pathname === "/" ? "active" : ""}
+              onClick={handleCloseMenu}
+            >
               Home
             </Link>
           </li>
 
           <li>
-            <Link href="/about" className={pathname === "/about" ? "active" : ""}>
+            <Link
+              href="/about"
+              className={pathname === "/about" ? "active" : ""}
+              onClick={handleCloseMenu}
+            >
               About Us
             </Link>
           </li>
 
           <li>
-            <a href="/#books-section">Books Category</a>
+            <Link
+              href="/#book-category"
+              onClick={handleCloseMenu}
+            >
+              Book Category
+            </Link>
           </li>
 
           <li>
-            <Link href="/contact" className={pathname === "/contact" ? "active" : ""}>
+            <Link
+              href="/contact"
+              className={pathname === "/contact" ? "active" : ""}
+              onClick={handleCloseMenu}
+            >
               Contact Us
             </Link>
           </li>
+
         </ul>
 
+        {}
         <div
           className={`hamburger ${menuOpen ? "active" : ""}`}
           onClick={() => setMenuOpen(!menuOpen)}

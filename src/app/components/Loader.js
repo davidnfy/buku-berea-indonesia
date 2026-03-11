@@ -1,30 +1,23 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import { usePathname, useSearchParams } from 'next/navigation';
+import { useEffect, useState } from "react";
 
 export default function Loader() {
-  const [isLoading, setIsLoading] = useState(true);
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
+  const [show, setShow] = useState(true);
 
   useEffect(() => {
-    setIsLoading(true);
-
     const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
+      setShow(false);
+    }, 1200);
 
     return () => clearTimeout(timer);
-  }, [pathname, searchParams]);
+  }, []);
+
+  if (!show) return null;
 
   return (
-    <>
-      {isLoading && (
-        <div className="loader-overlay">
-          <div className="loader"></div>
-        </div>
-      )}
-    </>
+    <div className="loader-overlay">
+      <div className="loader"></div>
+    </div>
   );
 }
