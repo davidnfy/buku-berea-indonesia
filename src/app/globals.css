@@ -254,25 +254,6 @@ a{
   max-width:300px;
 }
 
-.footer-links ul{
-  list-style:none;
-  padding:0;
-}
-
-.footer-links li{
-  margin-bottom:8px;
-}
-
-.footer-links a{
-  color:#d1d5db;
-  text-decoration:none;
-  transition:.2s;
-}
-
-.footer-links a:hover{
-  color:#ffffff;
-}
-
 .footer-bottom{
   text-align:center;
   padding:15px;

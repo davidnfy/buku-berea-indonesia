@@ -12,17 +12,6 @@ export default function Footer() {
             dengan lebih dalam.
           </p>
         </div>
-
-        <div className="footer-links">
-          <h4>Menu</h4>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/#books-section">Books</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </ul>
-        </div>
-
         <div className="footer-contact">
           <h4>Contact</h4>
           <p>Email: info@berea.id</p>

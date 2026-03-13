@@ -5,7 +5,7 @@ export const books = [
     id: 1,
     title: "Gambar Kehendak Allah",
     author: "Dr. Kim Ki Dong",
-    cover: "/buku/GKA.jpg",
+    cover: "/buku/GKA.webp",
     description: `Di dalam Alkitab tidak ada cerita dongeng. Seluruh isi Alkitab adalah peristiwa nyata dan di dalamnya terkandung janji Allah. Janji ini sampai sekarang pun tetap digenapi, kasih karunia dan kuasa darah Yesus Kristus – yang telah naik ke sorga dan duduk di sebelah kanan Allah – tetap sempurna sampai hari ini. Kesembuhan dengan kuasa-Nya serta wibawa sorgawi yang dinyatakan dalam nama-Nya masih tetap sama.
 Sekarang, dengan adanya hati yang diubahkan karena dorongan dan pimpinan Roh Kudus, serta adanya kepenuhan Roh Kudus, maka kuasa Yesus Kristus tetap sama, baik kemarin maupun hari ini dan sampai selama-lamanya (Ibr 13:8).
 Kita harus mengerti firman Allah dan memutuskan untuk memuliakan Allah. Ketika mengenal Gambar Kehendak Allah, akan muncul sukacita iman yang sesungguhnya dan rasa bersyukur. Percaya tanpa mengetahui hanyalah ketaatan yang membabi-buta dan takhayul, hal itu bukanlah iman yang sejati.
@@ -22,7 +22,7 @@ Jikalau seseorang mengatakan mengenal Allah, tetapi tidak mengetahui kebenaran (
     id: 2,
     title: "Allah Yang Tidak Melampaui",
     author: "Dr. Kim Ki Dong",
-    cover: "/buku/ALLAHTDK-MELAMPAUI.jpg",
+    cover: "/buku/ALLAHTDK-MELAMPAUI.webp",
     description: `Kita mengasihi Tuhan yang penuh anugerah, dan menghargai perkataan perintah-Nya sama seperti hidup-Nya, dan menyambut keduanya. Mengabaikan firman Tuhan adalah mengabaikan hidup-Nya. Ketika firman dinyatakan di dunia ini, firman tidak dimengerti walaupun didengar, tidak dipercayai walaupun dilihat. Tetapi setelah Tuhan disalibkan di atas kayu salib, barulah firman itu dapat dimengerti melalui Roh Kudus.
 Apabila kita menganggap kematian-Nya sebagai sesuatu yang kudus, kita harus menganggap kebangkitan-Nya sebagai yang kudus pula. Dengan menetapkan kematian dan kebangkitan-Nya sebagai sebuah model untuk kita, Ia memberikan kita Kerajaan-Nya yang kekal. Namun demikian menjadi keputus-asaan jika kita melampaui apa yang tidak dapat dilampaui itu.
 Bahkan umat Israel yang telah dipilih oleh Allah sebelum kita, tidak dapat melampaui kehendak Allah. Allah sendiri tidak dapat melampaui segala janji dan rencana-Nya. Karena Ia membiarkan Anak yang dikasihi-Nya itu mengecap kematian, Ia adalah Allah yang tidak melampaui.
@@ -39,7 +39,7 @@ Saya merekomendasikan buku ini kepada para orang kudus yang mengemban harapan da
     id: 3,
     title: "Anak Manusia Datang",
     author: "Dr. Kim Ki Dong",
-    cover: "/buku/ANAK-MANUSIA-DATANG.jpg",
+    cover: "/buku/ANAK-MANUSIA-DATANG.webp",
     description: `Ada banyak macam ciptaan di bumi. Tetapi di antara banyak ciptaan itu, Allah menciptakan manusia dengan khusus untuk tujuan-Nya semata. Allah menciptakan segalanya untuk manusia, tetapi Ia menciptakan manusia untuk dipakai menurut tujuan-Nya.
     Perhatikan bahwa manusia itu mempunyai tiga unsur: roh, jiwa dan tubuh. Kita bingung dari ketiganya ini, apa yang disebut manusia itu? Dan lagi, kita manusia mempunyai kehendak atau kemauan juga. Karena kita mempunyai kehendak, kita dapat menghakimi apa yang benar dan apa yang salah, dan kita dapat menimbang bagaimana kita harus berperilaku.
     Karena manusia mempunyai kehendak, mereka bisa merencanakan apa yang akan dilakukan di masa yang akan datang, dan berdasarkan rencana itu mereka dapat menyesuaikan perilakunya. Alasan mengapa manusia dapat melakukan hal yang seperti itu adalah karena kita mempunyai sesuatu yang dinamakan kepribadian. Kadang-kadang kita menyebutnya: jiwa.
@@ -57,7 +57,7 @@ Saya merekomendasikan buku ini kepada para orang kudus yang mengemban harapan da
     id: 4,
     title: "Berdoalah Seperti Ini",
     author: "Dr. Kim Ki Dong",
-    cover: "/buku/Berdoalah.jpg",
+    cover: "/buku/Berdoalah.webp",
     description: `Doa itu sepertinya pernafasan bagi tubuh, maka apabila doa itu berhenti sama dengan pernafasan ilahi berhenti, itu sama dengan kematian.
     Pada saat terakhir Yesus Kristus ketika roh jiwa-Nya meninggalkan-Nya, doa-Nya juga berhenti. Tetapi karena Ia hidup kembali, doa-Nya juga mulai lagi.Saat ini juga, Ia berdoa siang dan malam untuk kita di hadapan Allah, demikian doa adalah pernafasan kekal bagi orang yang hidup.
     Dengan menerbitkan tulisan yang pendek ini, saya akan memberitahukan cara doa yang saya doakan seumur hidup, supaya membujuk dan memberi iman kepada orang yang kecewa meskipun berdoa.`,
@@ -73,7 +73,7 @@ Saya merekomendasikan buku ini kepada para orang kudus yang mengemban harapan da
     id:5,
     title: "Faktor Faktor Yang Membayangi Roh JIwa",
     author: "Dr. Kim Ki Dong",
-    cover: "/buku/Faktor2.jpg",
+    cover: "/buku/Faktor2.webp",
     description:`Allah adalah yang berada di tengah-tengah kemuliaan. Kemuliaan Allah mencapai di mana-mana, maka segala kuasa dan wibawa Allah itu menjadi Mahahadir. Allah mempermuliakan Anak-Nya, maka Anak Allah menerima kemuliaan. Oleh sebab itu Yesus berkata, “Akulah Terang Dunia” (Yoh 8:12).
     Kemuliaan Allah bukanlah terang yang di ciptakan tetapi yang berada dari pada mulanya bersama-sama Allah. Cahaya matahari yaitu terang yang diciptakan itu dapat memberi hidup kepada mahluk-mahluk di dunia namun hanya sementara saja, sedangkan Firman Allah adalah terang dan hidup (Yoh 1:1-4) yang memberi hidup yang kekal.
     Seperti mahluk-mahluk yang tinggal di dalam kegelapan itu pasti mati, demikian juga roh dan jiwa manusia binasa apabila berada di dalam kegelapan dimana tidak ada kemuliaan Allah. Oleh sebab itu mereka yang berada di luar Yesus binasa. Orang-orang percaya harus dipenuhi dengan kemuliaan Allah, apabila roh dan jiwanya dibayangi itu sungguh merupakan suatu hal yang membahayakan.
@@ -91,7 +91,7 @@ Saya merekomendasikan buku ini kepada para orang kudus yang mengemban harapan da
     id: 6,
     title: "Hubungan Yang Kekal",
     author: "Dr. Kim Ki Dong",
-    cover: "/buku/HubunganKekal.jpg",
+    cover: "/buku/HubunganKekal.webp",
     description:`Hubungan yang terkait amat dalam dan ajaib di antara Tuhan dan orang kudus, berhubungan dengan hidup dan jaminan yang kekal. Hubungan kekal ini tidak mungkin berubah meskipun dunia ini lenyap dan dimulainya dunia ciptaan yang baru.
     Apabila seseorang pergi dengan jalannya sendiri tanpa hubungan yang mulia ini, dia akan menjadi apat? Tanpa Dia itulah kutuk. Selanjutnya yang ada hanyalah kutuk yang kekal. Hubungan kekal dengan Dia adalah hidup yang kekal, kemuliaan, dan damai sejahtera yang kekal.
     Iman kita adalah hubungan yang kekal, dan pengalaman yang harus secara mutlak ada pada kita juga adalah hubungan kekal. Kuasa dan arti kehidupan, serta kemuliaan, itu semua ada pada hubungan kekal. Hal kita berusaha menjaga hubungan kekal dengan Allah itu adalah iman dan kerinduan yang mengasihi Allah dan bekerja sesuai kehendak-Nya.
@@ -108,7 +108,7 @@ Saya merekomendasikan buku ini kepada para orang kudus yang mengemban harapan da
     id: 7,
     title: "Jalan Bagi Pemimpin Besar Orang Awam",
     author: "Dr. Kim Ki Dong",
-    cover: "/buku/Jalan-Besar.jpg",
+    cover: "/buku/Jalan-Besar.webp",
     description: `Pemimpin itu bukan karena pangkat tetapi kuasa kepemimpinan. Pemimpin seperti itu keluar dari orang awam yang memiliki iman dan pengalaman yang disiplin. Oleh sebab itu, usaha semasa orang awam membiarkannya mendapat posisi sebagai pemimpin yang unggul
     Pendeta pun harus bisa menjadi pemimpin orang percaya awam yang unggul ketika 'ganti baju.' Gereja Kristus mencari orang-orang seperti itu. Itulah apa yang diharapkan Tuhan dan perintah-Nya dan juga impian dari gereja kita masa kini.
     Buku ini menguraikan secara konkrit kemampuan arah sebagai seorang pemimpin yang dapat menanggung peranan penting dalam pertumbuhan gereja sehingga menolong untuk mendiagnosa dan membangun sendiri. Hai orang-orang percaya awam bertumbuhlah agar tidak ada kekurangan sebagai teman sekerja ketika dipanggil Tuhan!`,
@@ -124,7 +124,7 @@ Saya merekomendasikan buku ini kepada para orang kudus yang mengemban harapan da
     id: 8,
     title: "Kemah Suci Model dan Kenyataan Sebenarnya",
     author: "Dr. Kim Ki Dong",
-    cover: "/buku/Kemah-Suci.jpg",
+    cover: "/buku/Kemah-Suci.webp",
     description: `Kemah Suci ini bukanlah yang sebenarnya, melainkan kiasan saja, gambaran dari hal-hal sorgawi, yang berlaku hanya sampai tibanya waktu pembaharuan. Oleh karenanya, korban-korban yang berdasarkan hal tersebut dan yang dipersembahkan di situ, tidak dapat menyucikan secara lahiriah sebagai peraturan-peraturan lahiriah saja.
     Namun demikian, kita telah melihat bait suci sorga yang sebenarnya, melalui kedatangan Kristus, dan telah tiba untuk bersandar pada Kemah Suci yang sorgawi, bukan yang dibuat oleh tangan-tangan manusia. Inilah Injil dan kebenaran.
     Kiasan-kiasan adalah gambaran saja tetapi kebenaran adalah realitas atau kenyataan.
@@ -142,7 +142,7 @@ Saya merekomendasikan buku ini kepada para orang kudus yang mengemban harapan da
     id: 9,
     title: "Marilah Kita Mengenal Allah",
     author: "Dr. Kim Ki Dong",
-    cover: "/buku/Mengenal-Allah.jpg",
+    cover: "/buku/Mengenal-Allah.webp",
     description: `Umat manusia telah dihakimi sebagai orang berdosa oleh karena mereka sudah kehilangan inspirasi untuk mengenal Allah. Roh mereka mati oleh ketidak-taatan, sehingga mereka jatuh dan terpisah dari Allah meskipun mereka berusaha dengan agama mereka.
     Terlalu sukar bagi umat manusia untuk menemui Allah, sehingga Allah telah datang menemui manusia. Dia menunjukkan kepada bangsa Israel kehendak-Nya. Kemudian melalui nabi-nabi, pesan tentang kedatangan Mesias itu dikhotbahkan sampai pada akhirnya Mesias itu benar-benar datang yang nama-Nya Yesus Kristus.
     Allah itu kasih, hidup kekal dan Dia itu Bapa kita karena Yesus pertama kali yang menunjukkan Allah itu kepada manusia, yang tadinya Allah itu tidak dikenal oleh manusia.Jika orang berpura-pura mengenal Allah tetapi tidak mengenal Yesus, ia tidak mempunyai hidup; jika ia berpura-pura mengenal Yesus tapi tidak mengenal Allah ia tidak memiliki hidup kekal.
@@ -160,7 +160,7 @@ Saya merekomendasikan buku ini kepada para orang kudus yang mengemban harapan da
     id: 10,
     title: "Marilah Kita Kembali Kepada Alkitab",
     author: "Dr. Kim Ki Dong",
-    cover: "/buku/MkembAlkitab.jpg",
+    cover: "/buku/MkembAlkitab.webp",
     description: `Langit dan bumi akan berlalu tetapi firman Allah tidak akan berlalu. Firman itu hidup dan aktif. Firman Allah yang sempurna itu mengekspresikan atribut-atribut-Nya, menyatakan kehendak-Nya dan kuasa-Nya.
     Alkitab menyatakan Yesus Kristus datang dan Ia tidak berkata-kata atas kehendak-Nya sendiri. Ia berkata-kata hanya apa yang Ia dengar dari Bapa-Nya. Ia berkata-kata hanya apa yang Ia dengar dari Bapa-Nya. Yesus mengatakan, “Aku tidak berkata-kata dari diri-Ku sendiri. Aku berkata-kata apa yang Bapa katakan kepada-Ku”. Ia tidak melampaui Alkitab dan hanya berkata-kata seturut dengan Alkitab saja, bahkan Ia tunduk kepada Alkitab. Roh Kudus juga tidak melampaui Alkitab. Keagungan Alkitab itu adalah sedemikian tinggi sehingga bahkan Allah memelihara firman dan segala janji yang tertulis di dalamnya.
     Namun dewasa ini orang-orang yang hanya ciptaan dari debu tanah, malah meninggalkan Alkitab. Mereka lebih mengikuti ritual-ritual dogmatis dan bukannya Alkitab. Dan Roh Kudus tidak memeteraikan sesuatu ritual apa pun.
@@ -177,7 +177,7 @@ Saya merekomendasikan buku ini kepada para orang kudus yang mengemban harapan da
     id: 11,
     title: "Marilah Kita Mengenal Alkitab",
     author: "Dr. Kim Ki Dong",
-    cover: "/buku/MMAlkitab.jpg",
+    cover: "/buku/MMAlkitab.webp",
     description: `Orang-orang berpikir bahwa mereka dapat memperoleh hidup kekal dari Alkitab, sehingga mereka menyelidiki Alkitab, tetapi Alkitab adalah firman tentang Yesus; Yesus adalah Kristus, Dia Allah, salah satu posisi dari Tritunggal Mahakudus.
     Dia adalah gambar dari pada Allah yang tidak kelihatan; Dia adalah yang memiliki karakter dan sifat dasar dari Allah yang kekal; Dia adalah yang membinasakan pekerjaan Iblis serta yang menyelamatkan umat manusia dari hukum Taurat.
     Saya juga berharap agar buku ini bermanfaat bagi mereka yang mengajarkan Alkitab ataupun bagi para pengkhotbah, serta bermanfaat bagi iman jemaat awam.`,
@@ -193,7 +193,7 @@ Saya merekomendasikan buku ini kepada para orang kudus yang mengemban harapan da
     id: 12,
     title: "Nama Allah",
     author: "Dr. Kim Ki Dong",
-    cover: "/buku/Nama-Allah.jpg",
+    cover: "/buku/Nama-Allah.webp",
     description: `Ada banyak sekali allah-allah di dunia ini. Ada banyak sekali roh-roh di Sorga, tetapi hanya ada satu Allah yang di atas semuanya itu, tidak peduli berapapun jumlah mereka.
     Orang-orang percaya dapat dengan mudah mengerti tentang Allah, tetapi orang-orang dunia mempunyai pikirannya sendiri, setiap orang mempunyai keyakinannya sendiri, dengan begitu berapa banyak allah-allah yang mereka sembah. Orang harus ingat bahwa semua ilah itu diciptakan oleh Allah.
     Bagaimanapun juga, Allah yang kekal, sudah ada sebelum kekekalan yang tidak pernah diciptakan karena Dia sendiri yang ada dengan sendiri-Nya. Hanya ada satu Allah, artinya hanya Dia yang ada dengan Sendiri-Nya. Semua allah-allah yang lain itu hanya ciptaan, hanya ada karena Allah.
@@ -211,7 +211,7 @@ Saya merekomendasikan buku ini kepada para orang kudus yang mengemban harapan da
     id: 13,
     title: "Roh Jiwa Dan Tubuh",
     author: "Dr. Kim Ki Dong",
-    cover: "/buku/RohJiwaTubuh.jpg",
+    cover: "/buku/RohJiwaTubuh.webp",
     description: `Ada banyak macam ciptaan di bumi. Tetapi di antara banyak ciptaan itu, Allah menciptakan manusia dengan khusus untuk tujuan-Nya semata. Allah menciptakan segalanya untuk manusia, tetapi Ia menciptakan manusia untuk dipakai menurut tujuan-Nya.
     Perhatikan bahwa manusia itu mempunyai tiga unsur: roh, jiwa dan tubuh. Kita bingung dari ketiganya ini, apa yang disebut manusia itu? Dan lagi, kita manusia mempunyai kehendak atau kemauan juga. Karena kita mempunyai kehendak, kita dapat menghakimi apa yang benar dan apa yang salah, dan kita dapat menimbang bagaimana kita harus berperilaku.
     Karena manusia mempunyai kehendak, mereka bisa merencanakan apa yang akan dilakukan di masa yang akan datang, dan berdasarkan rencana itu mereka dapat menyesuaikan perilakunya. Alasan mengapa manusia dapat melakukan hal yang seperti itu adalah karena kita mempunyai sesuatu yang dinamakan kepribadian. Kadang-kadang kita menyebutnya: jiwa. Dengan demikian, roh jiwa harus menemukan orang yang peduli terhadap roh jiwa selama berada di muka bumi. Sebab kalau tidak, pada hari roh jiwa berpisah dengan tubuh, roh jiwa seperti anak yatim piatu yang ditinggalkan.
@@ -228,7 +228,7 @@ Saya merekomendasikan buku ini kepada para orang kudus yang mengemban harapan da
     id: 14,
     title: "Marilah Kita Mengenal Roh Kudus",
     author: "Dr. Kim Ki Dong",
-    cover: "/buku/RohKudus.jpg",
+    cover: "/buku/RohKudus.webp",
     description:`Kita mungkin telah mendengar banyak tentang Roh Kudus. Tetapi pengetahuan yang benar tentang Roh Kudus yang harus kita sambut dan kita layani sangat minim. “Pneumatologis” yang ditulis oleh ahli-ahli teologi, semuanya hampir sama sehingga seringkali yang kita tangkap dan kita ketahui hanya terbatas pada pengalaman penulis itu sendiri. Roh Kudus diperkenalkan oleh orang-orang yang mengalami Roh Kudus sejauh iman mereka. Namun kita harus mengetahui dengan benar apa yang dimaksudkan oleh Yesus ketika Dia menyebut dan memperkenalkan Roh Kudus. Kehendak-Nya dan tujuan-Nya adalah untuk bekerja, bukan untuk disebarluaskan. Tetapi kebanyakan orang Kristen saat ini menjadi bingung, apakah yang harus disebarluaskan, Yesus Kristus atau Roh Kudus?
     Adalah lebih gampang mengenal Yesus Kristus daripada Roh Kudus karena Yesus Kristus telah datang dalam sejarah umat manusia tetapi tidak demikian halnya dengan Roh Kudus. Roh Kudus diam dalam kesaksian orang-orang kudus sehingga tidak diperlihatkan kepada manusia.
     Buku ini akan mengajarkan kepada kita tentang Roh Kudus sebagaimana yang diperkenalkan Yesus Kristus. Apabila Yesus yang mengatakan siapakah Roh Kudus, dan bagaimana kita harus menerima dan menghormati-Nya maka kita telah menerima pengajaran yang paling baik, paling benar dan teragung di dunia ini. Kalau yang mengajarkan itu seorang guru besar atau ahli teologi, kita bisa menerima atau menolaknya. Tetapi karena ini ajaran Tuhan Yesus, kita tidak mempunyai pilihan lain kecuali harus menerima semuannya dan harus menaati semuanya. Namun sangat disayangkan, kita telah terbiasa menolak atau menerima sebab kita telah mendengar apa yang dikatakan oleh manusia tentang Roh Kudus sehingga pengetahuan semacam ini pun dapat membatasi kita akan apa yang seharusnya kita perlukan dari Allah atau Kristus tentang Roh Kudus.`,
@@ -244,7 +244,7 @@ Saya merekomendasikan buku ini kepada para orang kudus yang mengemban harapan da
     id: 15,
     title: "Shee Mu Awn",
     author: "Dr. Kim Ki Dong",
-    cover: "/buku/SheeMuAwn.jpg",
+    cover: "/buku/SheeMuAwn.webp",
     description: `Hancur luluh dan tercurah: Kisah perjalanan seorang Korea bersama Yesus. Melarat dan berniat bunuh diri secara mengerikan, seorang Ki Dong Kim muda dan berkemauan kuat bergelut dengan kegagapan bicara yang melemahkan dan krisis identitas yang akut, sambil bertahan hidup terhadap penyakit hepatitis, menghadapi pendudukan Jepang atas Korea dan kemudian perang Korea.
     Melalui serangkaian pengalaman yang menghinakan maupun yang menggembirakan di bawah penyertaan Allah, ia menjadi bejana yang dapat Allah pecahkan dan bentuk bagi pelbagai maksud dan tujuan-Nya untuk melayani-Nya selaku pembicara kenamaan se-dunia mengenai pertumbuhan gereja dan hidup yang dipimpin Roh Kudus; selaku penulis lebih dari 220 buku (2006) dan selaku gembala jemaat Baptis terbesar dalam sejarah dunia, Gereja Sung Rak (Sukacita Kudus) di Seoul - Korea, yang beranggotakan lebih dari 160.000 (2006) orang dewasa terpanggil untuk melayani seturut dengan karunia-karunia individual mereka.`,
     weight: "0,304 kg",
@@ -259,7 +259,7 @@ Saya merekomendasikan buku ini kepada para orang kudus yang mengemban harapan da
     id: 16,
     title: "Siapakah Iblis Itu",
     author: "Dr. Kim Ki Dong",
-    cover: "/buku/SiapaIblis.jpg",
+    cover: "/buku/SiapaIblis.webp",
     description: `Allah adalah satu-satunya yang berada dengan sendirinya. Segala sesuatu diciptakan oleh-Nya dan hidup oleh-Nya. Tetapi salah satu malaikat menentang Allah dan diusir dari hadapan Allah, maka inilah yang disebut Satan atau Iblis, yaitu “yang menyesatkan seluruh dunia” (Wahyu 12:19). Ialah yang “berbuat dosa dari mulanya” (1 Yohanes 3:8), dan ialah “pembunuh manusia sejak semula” (Yohanes 8:44) dan “pendusta dan bapa segala dusta” (Yohanes 8:44).
     Amarah Allah selaku Bapa bertindak untuk membinasakan perbuatan-perbuatan iblis, yaitu mengutus Anak Tunggal Allah (1 Yohanes 3:8). Dengan demikian orang percaya pun dapat menang oleh karena Yesus, dan akhirnya Allah menempatkan iblis di bawah hukuman kekal. Saya ingin menyingkapkan pekerjaan-pekerjaan yang tidak dapat diabaikan dan kuasa iblis yang mencerca sampai saat terakhir.
     Saya tidak bisa diam saja. Banyak orang Kristen jatuh dan berubah dalam sekejap saat saja karena tidak memiliki kebenaran. Walaupun banyak orang tidak suka, saya tetap megutuk musuh (iblis) dan ketidak percayaan. Saya ingin menyarankan orang Kristen mengendalikan sifat iblis sama dengan ketidak percayaan agar kehidupan iman mereka tidak menjadi sia-sia.
@@ -278,7 +278,7 @@ Saya merekomendasikan buku ini kepada para orang kudus yang mengemban harapan da
     id: 17,
     title: "Siapakah Roh-Roh Najis Itu",
     author: "Dr. Kim Ki Dong",
-    cover: "/buku/SiapaRohNajis.jpg",
+    cover: "/buku/SiapaRohNajis.webp",
     description: `Iblis dan antek-anteknya terus menerus mencecar manusia tiada akhir. Karena manusia adalah keberadaan roh, ia digoda iblis agar tidak dapat berhubungan dengan Allah. Lagipula karena manusia memiliki kepribadian, ia disesatkan oleh roh-roh penyesat. Dan karena manusia memiliki tubuh, ia diserang pelbagai penyakit dan kutuk oleh roh-roh najis.
     Buku Siapakah roh-roh najis itu? Adalah buku ketiga dari trilogi seri Demonologi yang merupakan kelanjutan dari buku pertama: Siapakah iblis itu? Dan buku kedua: Siapakah roh-roh penyesat itu?
     Demonologi adalah sebuah karya besar Rev. Dr. Ki Dong Kim. Buku ini sangat fenomenal karena ditulis berdasarkan Alkitabiah, Teologia dan Eksperimen secara nyata dalam pengusiran roh-roh najis dari 8000 orang.
@@ -295,7 +295,7 @@ Saya merekomendasikan buku ini kepada para orang kudus yang mengemban harapan da
     id: 18,
     title: "Siapakah Roh-Roh Penyesat Itu",
     author: "Dr. Kim Ki Dong",
-    cover: "/buku/SiapaRohPenyesat.jpg",
+    cover: "/buku/SiapaRohPenyesat.webp",
     description: `Di dunia ini ada tiga keberadaan roh yaitu Allah sebagai roh, malaikat-malaikat sebagai roh, dan manusia yang hakekatnya sebagai roh.
     Allah menciptakan malaikat untuk melayani diri-Nya dengan wibawa dan kuasa-Nya. Para malaikat adalah roh yang melayani Allah. Malaikat adalah keberadaan yang diciptakan mendahului manusia.
     Jikalau seseorang berpura-pura merendahkan diri sehingga melakukan hal yang bodoh, yaitu menyembah malaikat, ia akan kehilangan upah yang dikumpulkan seumur hidupnya.

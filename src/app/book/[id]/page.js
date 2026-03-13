@@ -1,5 +1,6 @@
 import Navbar from "@/app/components/Navbar";
 import { books } from "@/lib/books";
+import Link from "next/link";
 import "./book.css";
 
 export default async function BookDetail({ params }) {
@@ -20,9 +21,9 @@ export default async function BookDetail({ params }) {
       <div className="book-container">
         {}
         <div className="book-back">
-          <a href="/" className="btn-back">
-            <i className="fa-solid fa-arrow-left"></i> Kembali
-          </a>
+         <Link href="/   " className="btn-back">
+           <i className="fa-solid fa-arrow-left"></i> Kembali
+         </Link>
         </div>
         <div className="book-detail">
           {}

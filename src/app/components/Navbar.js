@@ -81,7 +81,7 @@ export default function Navbar() {
 
           <li>
             <Link
-              href="/#book-category"
+              href="/#books-section"
               onClick={handleCloseMenu}
             >
               Book Category

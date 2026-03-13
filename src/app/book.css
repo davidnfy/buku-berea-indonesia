@@ -1,193 +1,341 @@
-.mySwiper {
-  width: 100%;
-  padding: 50px 0 70px;
+.mySwiper{
+  width:100%;
+  padding:50px 0 70px;
 }
 
-.mySwiper .swiper-slide {
-  width: 240px;
-  height: 360px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.35s ease;
+.mySwiper .swiper-slide{
+  width:240px;
+  height:360px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  transition:.35s ease;
 }
 
-.mySwiper .swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 14px;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.18);
-  transition: transform 0.3s ease;
+.mySwiper .swiper-slide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  box-shadow:0 25px 50px rgba(0,0,0,.18);
+  transition:transform .3s ease;
 }
 
-.swiper-pagination-bullet-active {
-  background: #00a88b;
+.swiper-pagination-bullet-active{
+  background:#00a88b;
 }
 
-.books-section {
-  padding: 60px 0 80px;
-  background: #f9f8f8;
+.books-section{
+  padding:60px 20px 80px;
+  background:#f9f8f8;
 }
 
-.books-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
+.books-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:40px;
+  max-width:1100px;
+  margin:auto;
 }
 
-.book-card {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 26px;
-  transition: all 0.3s ease;
-  min-height: 320px; 
+.book-card-row{
+  display:flex;
+  gap:22px;
+  align-items:flex-start;
+  width:100%;
 }
 
-.book-card:hover {
-  background-color: #eaeaea;
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+.book-card-cover .cover-wrap{
+  position:relative;
+  width:170px;
+  height:260px;
+  overflow:hidden;
+  border-radius:12px;
+  flex-shrink:0;
 }
 
-.book-card-row {
-  display: flex;
-  gap: 22px;
-  align-items: flex-start;
-  width: 100%;
+.book-card-cover img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:12px;
+  box-shadow:0 18px 35px rgba(15,23,42,.15);
+  transition:.3s ease;
 }
 
-.book-card-cover .cover-wrap {
-  position: relative;
-  width: 170px;   
-  height: 260px; 
-  overflow: hidden;
-  border-radius: 12px;
-  flex-shrink: 0;
+.cover-wrap:hover img{
+  transform:scale(1.06);
+  filter:brightness(.45);
 }
 
-.book-card-cover img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.15);
-  transition: transform 0.3s ease, filter 0.3s ease;
+.cover-overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  background:rgba(0,0,0,.5);
+  transition:.3s ease;
+  border-radius:12px;
 }
 
-.cover-wrap:hover img {
-  transform: scale(1.06);
-  filter: brightness(0.45);
+.cover-wrap:hover .cover-overlay{
+  opacity:1;
 }
 
-.cover-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  background: rgba(0, 0, 0, 0.5);
-  transition: opacity 0.3s ease;
-  border-radius: 12px;
+.view-btn{
+  background:#fff;
+  border:none;
+  padding:9px 16px;
+  border-radius:8px;
+  font-weight:600;
+  font-size:13px;
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
+  cursor:pointer;
+  transition:.2s ease;
 }
 
-.cover-wrap:hover .cover-overlay {
-  opacity: 1;
+.view-btn:hover{
+  transform:scale(1.05);
 }
 
-.view-btn {
-  background: #ffffff;
-  border: none;
-  padding: 9px 16px;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 13px; 
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-  transition: transform 0.2s ease;
+.book-card-body{
+  flex:1;
+  min-width:0;
 }
 
-.view-btn:hover {
-  transform: scale(1.05);
+.book-card-title{
+  font-size:15px;
+  color:#0f172a;
+  margin-bottom:6px;
+  line-height:1.5;
 }
 
-.book-card-body {
-  flex: 1;
-  min-width: 0;
+.book-card-author{
+  color:#00a88b;
+  font-size:13px;
+  margin-bottom:10px;
 }
 
-.book-card-title {
-  font-size: 14px;
-  color: #0f172a;
-  margin-bottom: 6px;
-  line-height: 1.5;
-  word-break: break-word;
+.book-card-price-old{
+  color:#9ca3af;
+  text-decoration:line-through;
+  font-size:12px;
+  margin-right:8px;
 }
 
-.book-card-author {
-  color: #00a88b;
-  font-size: 12px;
-  margin-bottom: 10px;
-  word-break: break-word;
+.book-card-price-new{
+  color:#000;
+  font-weight:700;
+  font-size:15px;
 }
 
-.book-card-price-old {
-  color: #9ca3af;
-  text-decoration: line-through;
-  font-size: 12px;
-  margin-right: 8px;
+.ready-stock{
+  margin-top:100px;
+  padding:0 20px;
 }
 
-.book-card-price-new {
-  color: #000000;
-  font-weight: 700;
-  font-size: 15px; 
-  margin-top: 4px;
+.ready-stock-header{
+  text-align:center;
+  margin-bottom:40px;
 }
 
-@media (max-width: 1024px) {
-  .books-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.ready-stock-header h2{
+  font-size:32px;
+  font-weight:800;
+  color:#0f172a;
 }
 
-@media (max-width: 768px) {
-  .books-section {
-    padding: 60px 20px 80px;
-    background: #f3f4f6;
-  }
+.ready-stock-list{
+  display:flex;
+  flex-direction:column;
+  gap:40px;
+  max-width:1100px;
+  margin:auto;
+}
 
-  .books-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-  }
+.ready-book-card{
+  background:#fff;
+  padding:30px;
+  border-radius:14px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  transition:.25s;
+}
 
-  .book-card {
-    padding: 24px;
-    min-height: 300px; 
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
-  }
+.ready-book-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
 
-  .book-card:hover {
-    transform: none;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
-    background: #ffffff;
-  }
+.ready-book{
+  display:flex;
+  gap:40px;
+  align-items:center;
+}
 
-  .book-card-cover .cover-wrap {
-    width: 150px;
-    height: 240px;
-  }
+.ready-book-cover img{
+  width:260px;
+  height:380px;
+  object-fit:cover;
+  border-radius:8px;
+  box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
 
-  .book-card-title {
-    font-size: 14px;
-  }
+.ready-book-info{
+  max-width:600px;
+}
 
-  .book-card-price-new {
-    font-size: 15px;
-  }
+.ready-book-title{
+  font-size:26px;
+  font-weight:700;
+  margin-bottom:10px;
+}
+
+.ready-book-author{
+  color:#64748b;
+  margin-bottom:10px;
+}
+
+.ready-book-price{
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  margin-bottom:15px;
+  width:100%;
+}
+
+.ready-old{
+  text-decoration:line-through;
+  color:#94a3b8;
+}
+
+.ready-new{
+  font-weight:700;
+  font-size:20px;
+  color:#0f172a;
+  text-align:center;
+}
+
+.ready-book-desc{
+  color:#475569;
+  margin-bottom:20px;
+  line-height:1.6;
+}
+
+.ready-btn{
+  display:inline-block;
+  background:#22c1a1;
+  color:#fff;
+  padding:10px 22px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:600;
+  transition:.2s;
+}
+
+.ready-btn:hover{
+  background:#17a589;
+}
+
+@media (max-width:1024px){
+
+.books-grid{
+  grid-template-columns:repeat(2,1fr);
+}
+
+.ready-book{
+  gap:30px;
+}
+
+.ready-book-cover img{
+  width:220px;
+  height:300px;
+}
+
+.ready-book-title{
+  font-size:22px;
+}
+
+}
+
+@media (max-width:768px){
+
+.mySwiper .swiper-slide{
+  width:180px;
+  height:280px;
+}
+
+.books-grid{
+  grid-template-columns:1fr;
+  gap:30px;
+}
+
+.book-card-row{
+  gap:16px;
+}
+
+.book-card-cover .cover-wrap{
+  width:130px;
+  height:200px;
+}
+
+.ready-book{
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+.ready-book-cover img{
+  width:200px;
+  height:270px;
+}
+
+.ready-book-info{
+  max-width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.ready-book-title{
+  font-size:20px;
+}
+
+.ready-book-price{
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.ready-new{
+  font-size:18px;
+}
+
+}
+
+@media (max-width:480px){
+
+.mySwiper .swiper-slide{
+  width:150px;
+  height:240px;
+}
+
+.book-card-cover .cover-wrap{
+  width:110px;
+  height:170px;
+}
+
+.ready-book-cover img{
+  width:170px;
+  height:230px;
+}
+
+.ready-book-card{
+  padding:22px;
+}
+
+.ready-new{
+  font-size:17px;
+}
+
 }
