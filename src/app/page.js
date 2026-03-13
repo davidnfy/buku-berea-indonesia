@@ -1,16 +1,14 @@
 "use client";
-
 import Navbar from "@/app/components/Navbar";
 import Link from "next/link";
-
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import "swiper/css/autoplay";
 import "./book.css";
-
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow } from "swiper/modules";
+import { EffectCoverflow, Autoplay } from "swiper/modules";
 
 export default function BookPage() {
 
@@ -86,17 +84,14 @@ export default function BookPage() {
 
       <section id="books-section" className="books-section">
         <div className="container py-5">
-
           <div className="books-header">
-            <h2>Book Category</h2>
+            <h2>Buku Katalog</h2>
             <div className="books-header-line"></div>
           </div>
-
           <div className="books-grid">
             {books.map((b) => (
               <div key={b.id}>
                 <div className="book-card-row">
-
                   <div className="book-card-cover">
                     <div className="cover-wrap">
                       <img
@@ -106,7 +101,6 @@ export default function BookPage() {
                           e.target.src = "/buku/default.jpg";
                         }}
                       />
-
                       <div className="cover-overlay">
                         <Link href={`/book/${b.id}`} className="view-btn">
                           View Book
@@ -114,67 +108,83 @@ export default function BookPage() {
                       </div>
                     </div>
                   </div>
-
                   <div className="book-card-body">
                     <h3 className="book-card-title">{b.title}</h3>
-
                     <div className="book-card-author">
                       {b.author}
                     </div>
-
                     <div className="book-card-price">
                       <div className="book-card-price-old">
                         {formatRupiah(b.oldPrice)}
                       </div>
-
                       <div className="book-card-price-new">
                         {formatRupiah(b.price)}
                       </div>
                     </div>
                   </div>
-
                 </div>
               </div>
             ))}
           </div>
 
           <section className="ready-stock">
-
             <div className="ready-stock-header">
               <h2>Ready Stock</h2>
               <div className="books-header-line"></div>
             </div>
-
+            <Swiper
+              spaceBetween={20}
+              loop={true}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              modules={[Autoplay]}
+              className="ready-stock-slider"
+              breakpoints={{
+                0: {
+                  slidesPerView: 1,
+                },
+                640: {
+                  slidesPerView: 2,
+                },
+                768: {
+                  slidesPerView: 3,
+                },
+                1024: {
+                  slidesPerView: 5,
+                },
+              }}
+            >
+              {books.map((b) => (
+                <SwiperSlide key={b.id}>
+                  <Link href={`/book/${b.id}`}>
+                    <img src={b.cover} alt={b.title} />
+                  </Link>
+                </SwiperSlide>
+              ))}
+            </Swiper>
             <div className="ready-stock-list">
-
               {randomBook && (
-
               <div className="ready-book-card">
-
                 <div className="ready-book">
-
                   <div className="ready-book-cover">
                     <img src={randomBook.cover} alt={randomBook.title} />
                   </div>
-
                   <div className="ready-book-info">
-
                     <h3 className="ready-book-title">
                       {randomBook.title}
                     </h3>
-
                     <p className="ready-book-author">
                       Author: {randomBook.author}
                     </p>
-
                     <div className="ready-book-price">
                       <span className="ready-new">
                         {formatRupiah(randomBook.price)}
                       </span>
                     </div>
                     <p className="ready-book-desc">
-                      Buku rohani karya Dr. Kim Ki Dong yang membahas
-                      pengajaran Alkitab secara mendalam dan praktis.
+                      Buku rohani karya Dr. Kim Ki Dong yang membahas pengajaran Alkitab secara mendalam dan praktis.
                     </p>
                     <Link
                       href={`/book/${randomBook.id}`}

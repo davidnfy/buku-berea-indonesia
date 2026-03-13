@@ -65,7 +65,7 @@ export default function Navbar() {
               className={pathname === "/" ? "active" : ""}
               onClick={handleCloseMenu}
             >
-              Home
+              Beranda
             </Link>
           </li>
 
@@ -75,7 +75,7 @@ export default function Navbar() {
               className={pathname === "/about" ? "active" : ""}
               onClick={handleCloseMenu}
             >
-              About Us
+              Tentang Kami
             </Link>
           </li>
 
@@ -84,7 +84,7 @@ export default function Navbar() {
               href="/#books-section"
               onClick={handleCloseMenu}
             >
-              Book Category
+              Buku Katalog
             </Link>
           </li>
 
@@ -94,7 +94,7 @@ export default function Navbar() {
               className={pathname === "/contact" ? "active" : ""}
               onClick={handleCloseMenu}
             >
-              Contact Us
+              Hubungi Kami
             </Link>
           </li>
 
