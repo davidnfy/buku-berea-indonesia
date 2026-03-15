@@ -60,7 +60,6 @@ export default function BookPage() {
   }, [readyBooks.length]);
 
 
-  /* ===== RESTORE SCROLL POSITION ===== */
   useEffect(() => {
     const scroll = sessionStorage.getItem("scroll-position");
     if (scroll) {
@@ -68,7 +67,6 @@ export default function BookPage() {
       sessionStorage.removeItem("scroll-position");
     }
   }, []);
-  /* =================================== */
 
   const currentBook = readyBooks[index];
 
