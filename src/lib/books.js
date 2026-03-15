@@ -295,7 +295,7 @@ Saya merekomendasikan buku ini kepada para orang kudus yang mengemban harapan da
     id: 18,
     title: "Siapakah Roh-Roh Penyesat Itu",
     author: "Dr. Kim Ki Dong",
-    cover: "/buku/SiapaRohPenyesat.webp",
+    cover: "/buku/SiaparohPenyesat.webp",
     description: `Di dunia ini ada tiga keberadaan roh yaitu Allah sebagai roh, malaikat-malaikat sebagai roh, dan manusia yang hakekatnya sebagai roh.
     Allah menciptakan malaikat untuk melayani diri-Nya dengan wibawa dan kuasa-Nya. Para malaikat adalah roh yang melayani Allah. Malaikat adalah keberadaan yang diciptakan mendahului manusia.
     Jikalau seseorang berpura-pura merendahkan diri sehingga melakukan hal yang bodoh, yaitu menyembah malaikat, ia akan kehilangan upah yang dikumpulkan seumur hidupnya.
