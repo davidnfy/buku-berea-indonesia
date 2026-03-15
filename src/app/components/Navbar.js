@@ -84,7 +84,7 @@ export default function Navbar() {
               href="/#books-section"
               onClick={handleCloseMenu}
             >
-              Buku Katalog
+              Katalog Buku
             </Link>
           </li>
 

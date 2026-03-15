@@ -96,7 +96,7 @@ export default function BookPage() {
       <section id="books-section" className="books-section">
         <div className="container py-5">
           <div className="books-header">
-            <h2>Buku Katalog</h2>
+            <h2>Katalog Buku</h2>
             <div className="books-header-line"></div>
           </div>
           <div className="books-grid">
@@ -135,7 +135,7 @@ export default function BookPage() {
 
           <section className="ready-stock">
             <div className="ready-stock-header">
-              <h2>Ready Stock</h2>
+              <h2>Buku Tersedia</h2>
               <div className="books-header-line"></div>
             </div>
 
