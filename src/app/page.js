@@ -59,11 +59,23 @@ export default function BookPage() {
     return () => clearInterval(interval);
   }, [readyBooks.length]);
 
+
+  /* ===== RESTORE SCROLL POSITION ===== */
+  useEffect(() => {
+    const scroll = sessionStorage.getItem("scroll-position");
+    if (scroll) {
+      window.scrollTo(0, parseInt(scroll));
+      sessionStorage.removeItem("scroll-position");
+    }
+  }, []);
+  /* =================================== */
+
   const currentBook = readyBooks[index];
 
   return (
     <>
       <Navbar />
+
       <section className="slider-section">
         <div className="container">
           <Swiper
@@ -84,7 +96,12 @@ export default function BookPage() {
           >
             {books.map((b) => (
               <SwiperSlide key={b.id}>
-                <Link href={`/book/${b.id}`}>
+                <Link
+                  href={`/book/${b.id}`}
+                  onClick={() =>
+                    sessionStorage.setItem("scroll-position", window.scrollY)
+                  }
+                >
                   <img src={b.cover} alt={b.title} />
                 </Link>
               </SwiperSlide>
@@ -95,22 +112,32 @@ export default function BookPage() {
 
       <section id="books-section" className="books-section">
         <div className="container py-5">
+
           <div className="books-header">
             <h2>Katalog Buku</h2>
             <div className="books-header-line"></div>
           </div>
+
           <div className="books-grid">
             {books.map((b) => (
               <div key={b.id} className="book-card-row">
 
                 <div className="book-card-cover">
                   <div className="cover-wrap">
-                    <img src={b.cover} alt={b.title}/>
+                    <img src={b.cover} alt={b.title} />
+
                     <div className="cover-overlay">
-                      <Link href={`/book/${b.id}`} className="view-btn">
+                      <Link
+                        href={`/book/${b.id}`}
+                        className="view-btn"
+                        onClick={() =>
+                          sessionStorage.setItem("scroll-position", window.scrollY)
+                        }
+                      >
                         View Book
                       </Link>
                     </div>
+
                   </div>
                 </div>
 
@@ -134,6 +161,7 @@ export default function BookPage() {
           </div>
 
           <section className="ready-stock">
+
             <div className="ready-stock-header">
               <h2>Buku Tersedia</h2>
               <div className="books-header-line"></div>
@@ -142,14 +170,16 @@ export default function BookPage() {
             {currentBook && (
               <div className="ready-book-card">
                 <div className={`ready-book ${animate ? "slide-out" : "slide-in"}`}>
+
                   <div className="ready-book-cover">
-                    <img src={currentBook.cover} alt={currentBook.title}/>
+                    <img src={currentBook.cover} alt={currentBook.title} />
                   </div>
 
                   <div className="ready-book-info">
                     <h3 className="ready-book-title">
                       {currentBook.title}
                     </h3>
+
                     <p className="ready-book-author">
                       Author: {currentBook.author}
                     </p>
@@ -159,20 +189,28 @@ export default function BookPage() {
                         {formatRupiah(currentBook.price)}
                       </span>
                     </div>
+
                     <p className="ready-book-desc">
                       Buku rohani karya Dr. Kim Ki Dong yang membahas pengajaran Alkitab secara mendalam dan praktis.
                     </p>
+
                     <Link
                       href={`/book/${currentBook.id}`}
                       className="ready-btn"
+                      onClick={() =>
+                        sessionStorage.setItem("scroll-position", window.scrollY)
+                      }
                     >
                       View Book
                     </Link>
+
                   </div>
                 </div>
               </div>
             )}
+
           </section>
+
         </div>
       </section>
     </>
