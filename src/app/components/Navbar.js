@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
   const pathname = usePathname();
@@ -42,75 +43,81 @@ export default function Navbar() {
   };
 
   return (
-    <nav className={`navbar ${showNavbar ? "" : "hide"}`}>
-      <div className="container nav-container">
-
-        {}
-        <Link href="/" className="logo" onClick={handleCloseMenu}>
-          <Image
-            src="/assets/logo-berea.webp"
-            alt="Logo Berea"
-            width={40}
-            height={40}
-            priority
-          />
-        </Link>
-
-        {}
-        <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
-
-          <li>
-            <Link
-              href="/"
-              className={pathname === "/" ? "active" : ""}
-              onClick={handleCloseMenu}
-            >
-              Beranda
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              href="/about"
-              className={pathname === "/about" ? "active" : ""}
-              onClick={handleCloseMenu}
-            >
-              Tentang Kami
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              href="/#books-section"
-              onClick={handleCloseMenu}
-            >
-              Katalog Buku
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              href="/contact"
-              className={pathname === "/contact" ? "active" : ""}
-              onClick={handleCloseMenu}
-            >
-              Hubungi Kami
-            </Link>
-          </li>
-
-        </ul>
-
-        {}
+    <>
+      {menuOpen && (
         <div
-          className={`hamburger ${menuOpen ? "active" : ""}`}
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+          className="menu-overlay"
+          onClick={handleCloseMenu}
+        ></div>
+      )}
 
-      </div>
-    </nav>
+      <nav className={`navbar ${showNavbar ? "" : "hide"}`}>
+        <div className="container nav-container">
+
+          <Link href="/" className="logo" onClick={handleCloseMenu}>
+            <Image
+              src="/assets/logo-berea.webp"
+              alt="Logo Berea"
+              width={40}
+              height={40}
+              priority
+            />
+          </Link>
+
+          <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
+
+            <li>
+              <Link
+                href="/"
+                className={pathname === "/" ? "active" : ""}
+                onClick={handleCloseMenu}
+              >
+                Beranda
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                href="/about"
+                className={pathname === "/about" ? "active" : ""}
+                onClick={handleCloseMenu}
+              >
+                Tentang Kami
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                href="/#books-section"
+                onClick={handleCloseMenu}
+              >
+                Katalog Buku
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                href="/contact"
+                className={pathname === "/contact" ? "active" : ""}
+                onClick={handleCloseMenu}
+              >
+                Hubungi Kami
+              </Link>
+            </li>
+
+          </ul>
+
+          <div
+            className={`hamburger ${menuOpen ? "active" : ""}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+        </div>
+      </nav>
+    </>
   );
 }
