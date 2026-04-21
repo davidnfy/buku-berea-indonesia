@@ -61,7 +61,7 @@ export default async function BookDetail({ params }) {
             </p>
 
             <a
-              href={`https://wa.me/6282245403807?text=Saya ingin membeli buku ${book.title}`}
+              href={`https://wa.me/6282313789374?text=Saya ingin membeli buku ${book.title}`}
               target="_blank"
               className="btn-buy"
             >
