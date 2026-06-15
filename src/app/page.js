@@ -1,15 +1,17 @@
 "use client";
-import Navbar from "@/app/components/Navbar";
+
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCoverflow } from "swiper/modules";
+import Navbar from "@/app/components/Navbar";
+
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "./book.css";
-import React, { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow } from "swiper/modules";
 
 export default function BookPage() {
-
+  // ========== HELPER FUNCTIONS ==========
   const formatRupiah = (number) => {
     return new Intl.NumberFormat("id-ID", {
       style: "currency",
@@ -18,12 +20,13 @@ export default function BookPage() {
     }).format(number);
   };
 
+  // ========== DATA ==========
   const books = [
     { id: 1, title: "Gambar Kehendak Allah", author: "Dr. Kim Ki Dong", cover: "/buku/GKA.webp", oldPrice: 100000, price: 80000 },
     { id: 2, title: "Allah Yang Tidak Melampaui", author: "Dr. Kim Ki Dong", cover: "/buku/ALLAHTDK-MELAMPAUI.webp", oldPrice: 120000, price: 80000 },
     { id: 3, title: "Anak Manusia Datang", author: "Dr. Kim Ki Dong", cover: "/buku/ANAK-MANUSIA-DATANG.webp", oldPrice: 100000, price: 60000 },
     { id: 4, title: "Berdoalah Seperti Ini", author: "Dr. Kim Ki Dong", cover: "/buku/Berdoalah.webp", oldPrice: 120000, price: 60000 },
-    { id: 5, title: "Faktor Faktor Yang Membayangi Roh JIwa", author: "Dr. Kim Ki Dong", cover: "/buku/Faktor2.webp", oldPrice: 105000, price: 60000 },
+    { id: 5, title: "Faktor Faktor Yang Membayangi Roh Jiwa", author: "Dr. Kim Ki Dong", cover: "/buku/Faktor2.webp", oldPrice: 105000, price: 60000 },
     { id: 6, title: "Hubungan Yang Kekal", author: "Dr. Kim Ki Dong", cover: "/buku/HubunganKekal.webp", oldPrice: 110000, price: 100000 },
     { id: 7, title: "Jalan Bagi Pemimpin Besar", author: "Dr. Kim Ki Dong", cover: "/buku/Jalan-Besar.webp", oldPrice: 150000, price: 100000 },
     { id: 8, title: "Kemah Suci", author: "Dr. Kim Ki Dong", cover: "/buku/Kemah-Suci.webp", oldPrice: 90000, price: 60000 },
@@ -39,26 +42,48 @@ export default function BookPage() {
     { id: 18, title: "Siapa Roh Penyesat Itu", author: "Dr. Kim Ki Dong", cover: "/buku/SiaparohPenyesat.webp", oldPrice: 85000, price: 60000 },
   ];
 
+  const faqs = [
+    {
+      question: "Apa itu Buku Berea?",
+      answer: "Buku Berea adalah bahan pembelajaran Alkitab yang membantu jemaat memahami Firman Tuhan secara lebih mendalam.",
+    },
+    {
+      question: "Siapa penulis buku-buku ini?",
+      answer: "Sebagian besar buku ditulis oleh Dr. Kim Ki Dong dan telah diterjemahkan ke dalam Bahasa Indonesia.",
+    },
+    {
+      question: "Bagaimana cara membeli buku?",
+      answer: "Silakan buka halaman detail buku yang diinginkan lalu ikuti petunjuk pemesanan yang tersedia.",
+    },
+    {
+      question: "Apakah tersedia pengiriman ke luar kota?",
+      answer: "Ya, buku dapat dikirim ke berbagai daerah sesuai ketentuan pengiriman yang berlaku.",
+    },
+    {
+      question: "Apakah tersedia versi digital?",
+      answer: "Beberapa buku tersedia dalam format digital, sementara lainnya hanya tersedia dalam bentuk cetak.",
+    },
+  ];
+
   const readyBooks = books.filter((b) => b.price > 0);
 
+  // ========== STATE ==========
   const [index, setIndex] = useState(0);
   const [animate, setAnimate] = useState(false);
+  const [openFaq, setOpenFaq] = useState(null);
 
+  // ========== EFFECTS ==========
   useEffect(() => {
     const interval = setInterval(() => {
-
       setAnimate(true);
-
       setTimeout(() => {
         setIndex((prev) => (prev + 1) % readyBooks.length);
         setAnimate(false);
       }, 400);
-
     }, 5000);
 
     return () => clearInterval(interval);
   }, [readyBooks.length]);
-
 
   useEffect(() => {
     const scroll = sessionStorage.getItem("scroll-position");
@@ -70,10 +95,12 @@ export default function BookPage() {
 
   const currentBook = readyBooks[index];
 
+  // ========== RENDER ==========
   return (
     <>
       <Navbar />
 
+      {/* Hero Slider Section */}
       <section className="slider-section">
         <div className="container">
           <Swiper
@@ -96,9 +123,7 @@ export default function BookPage() {
               <SwiperSlide key={b.id}>
                 <Link
                   href={`/book/${b.id}`}
-                  onClick={() =>
-                    sessionStorage.setItem("scroll-position", window.scrollY)
-                  }
+                  onClick={() => sessionStorage.setItem("scroll-position", window.scrollY)}
                 >
                   <img src={b.cover} alt={b.title} />
                 </Link>
@@ -108,58 +133,48 @@ export default function BookPage() {
         </div>
       </section>
 
+      {/* Books Catalog Section */}
       <section id="books-section" className="books-section">
         <div className="container py-5">
-
+          {/* Header */}
           <div className="books-header">
             <h2>Katalog Buku</h2>
             <div className="books-header-line"></div>
           </div>
 
+          {/* Books Grid */}
           <div className="books-grid">
             {books.map((b) => (
               <div key={b.id} className="book-card-row">
-
                 <div className="book-card-cover">
                   <div className="cover-wrap">
                     <img src={b.cover} alt={b.title} />
-
                     <div className="cover-overlay">
                       <Link
                         href={`/book/${b.id}`}
                         className="view-btn"
-                        onClick={() =>
-                          sessionStorage.setItem("scroll-position", window.scrollY)
-                        }
+                        onClick={() => sessionStorage.setItem("scroll-position", window.scrollY)}
                       >
                         View Book
                       </Link>
                     </div>
-
                   </div>
                 </div>
 
                 <div className="book-card-body">
                   <h3 className="book-card-title">{b.title}</h3>
                   <div className="book-card-author">{b.author}</div>
-
                   <div className="book-card-price">
-                    <div className="book-card-price-old">
-                      {formatRupiah(b.oldPrice)}
-                    </div>
-                    <div className="book-card-price-new">
-                      {formatRupiah(b.price)}
-                    </div>
+                    <div className="book-card-price-old">{formatRupiah(b.oldPrice)}</div>
+                    <div className="book-card-price-new">{formatRupiah(b.price)}</div>
                   </div>
-
                 </div>
-
               </div>
             ))}
           </div>
 
+          {/* Ready Stock Section */}
           <section className="ready-stock">
-
             <div className="ready-stock-header">
               <h2>Buku Tersedia</h2>
               <div className="books-header-line"></div>
@@ -168,47 +183,57 @@ export default function BookPage() {
             {currentBook && (
               <div className="ready-book-card">
                 <div className={`ready-book ${animate ? "slide-out" : "slide-in"}`}>
-
                   <div className="ready-book-cover">
                     <img src={currentBook.cover} alt={currentBook.title} />
                   </div>
 
                   <div className="ready-book-info">
-                    <h3 className="ready-book-title">
-                      {currentBook.title}
-                    </h3>
-
-                    <p className="ready-book-author">
-                      Author: {currentBook.author}
-                    </p>
-
+                    <h3 className="ready-book-title">{currentBook.title}</h3>
+                    <p className="ready-book-author">Author: {currentBook.author}</p>
                     <div className="ready-book-price">
-                      <span className="ready-new">
-                        {formatRupiah(currentBook.price)}
-                      </span>
+                      <span className="ready-new">{formatRupiah(currentBook.price)}</span>
                     </div>
-
                     <p className="ready-book-desc">
                       Buku rohani karya Dr. Kim Ki Dong yang membahas pengajaran Alkitab secara mendalam dan praktis.
                     </p>
-
                     <Link
                       href={`/book/${currentBook.id}`}
                       className="ready-btn"
-                      onClick={() =>
-                        sessionStorage.setItem("scroll-position", window.scrollY)
-                      }
+                      onClick={() => sessionStorage.setItem("scroll-position", window.scrollY)}
                     >
                       View Book
                     </Link>
-
                   </div>
                 </div>
               </div>
             )}
-
           </section>
 
+          {/* FAQ Section */}
+          <section className="faq-section">
+            <div className="books-header">
+              <h2>Frequently Asked Questions</h2>
+              <div className="books-header-line"></div>
+            </div>
+
+            <div className="faq-container">
+              {faqs.map((faq, idx) => (
+                <div className="faq-item" key={idx}>
+                  <button
+                    className="faq-question"
+                    onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                  >
+                    <span>{faq.question}</span>
+                    <span>{openFaq === idx ? "−" : "+"}</span>
+                  </button>
+
+                  {openFaq === idx && (
+                    <div className="faq-answer">{faq.answer}</div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
         </div>
       </section>
     </>
