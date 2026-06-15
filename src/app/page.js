@@ -2,16 +2,15 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import Navbar from "@/app/components/Navbar";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow } from "swiper/modules";
-import Navbar from "@/app/components/Navbar";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "./book.css";
 
 export default function BookPage() {
-  // ========== HELPER FUNCTIONS ==========
   const formatRupiah = (number) => {
     return new Intl.NumberFormat("id-ID", {
       style: "currency",
@@ -20,7 +19,6 @@ export default function BookPage() {
     }).format(number);
   };
 
-  // ========== DATA ==========
   const books = [
     { id: 1, title: "Gambar Kehendak Allah", author: "Dr. Kim Ki Dong", cover: "/buku/GKA.webp", oldPrice: 100000, price: 80000 },
     { id: 2, title: "Allah Yang Tidak Melampaui", author: "Dr. Kim Ki Dong", cover: "/buku/ALLAHTDK-MELAMPAUI.webp", oldPrice: 120000, price: 80000 },
@@ -65,14 +63,18 @@ export default function BookPage() {
     },
   ];
 
-  const readyBooks = books.filter((b) => b.price > 0);
-
-  // ========== STATE ==========
+  const readyBooks = books.filter((book) => book.price > 0);
   const [index, setIndex] = useState(0);
   const [animate, setAnimate] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
 
-  // ========== EFFECTS ==========
+  const filteredBooks = books.filter(
+    (book) =>
+      book.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      book.author.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   useEffect(() => {
     const interval = setInterval(() => {
       setAnimate(true);
@@ -81,7 +83,6 @@ export default function BookPage() {
         setAnimate(false);
       }, 400);
     }, 5000);
-
     return () => clearInterval(interval);
   }, [readyBooks.length]);
 
@@ -95,20 +96,18 @@ export default function BookPage() {
 
   const currentBook = readyBooks[index];
 
-  // ========== RENDER ==========
   return (
     <>
       <Navbar />
 
-      {/* Hero Slider Section */}
       <section className="slider-section">
         <div className="container">
           <Swiper
             effect="coverflow"
-            grabCursor={true}
-            centeredSlides={true}
+            grabCursor
+            centeredSlides
             slidesPerView="auto"
-            loop={true}
+            loop
             coverflowEffect={{
               rotate: 0,
               stretch: -10,
@@ -119,13 +118,13 @@ export default function BookPage() {
             modules={[EffectCoverflow]}
             className="mySwiper"
           >
-            {books.map((b) => (
-              <SwiperSlide key={b.id}>
+            {books.map((book) => (
+              <SwiperSlide key={book.id}>
                 <Link
-                  href={`/book/${b.id}`}
+                  href={`/book/${book.id}`}
                   onClick={() => sessionStorage.setItem("scroll-position", window.scrollY)}
                 >
-                  <img src={b.cover} alt={b.title} />
+                  <img src={book.cover} alt={book.title} />
                 </Link>
               </SwiperSlide>
             ))}
@@ -133,25 +132,35 @@ export default function BookPage() {
         </div>
       </section>
 
-      {/* Books Catalog Section */}
       <section id="books-section" className="books-section">
         <div className="container py-5">
-          {/* Header */}
           <div className="books-header">
             <h2>Katalog Buku</h2>
             <div className="books-header-line"></div>
           </div>
 
-          {/* Books Grid */}
+          <div className="search-wrapper">
+            <input
+              type="text"
+              placeholder="Cari buku berdasarkan judul.."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="search-input"
+            />
+          </div>
+
           <div className="books-grid">
-            {books.map((b) => (
-              <div key={b.id} className="book-card-row">
+            {filteredBooks.length === 0 && (
+              <div className="no-books">Buku tidak ditemukan.</div>
+            )}
+            {filteredBooks.map((book) => (
+              <div key={book.id} className="book-card-row">
                 <div className="book-card-cover">
                   <div className="cover-wrap">
-                    <img src={b.cover} alt={b.title} />
+                    <img src={book.cover} alt={book.title} />
                     <div className="cover-overlay">
                       <Link
-                        href={`/book/${b.id}`}
+                        href={`/book/${book.id}`}
                         className="view-btn"
                         onClick={() => sessionStorage.setItem("scroll-position", window.scrollY)}
                       >
@@ -160,33 +169,29 @@ export default function BookPage() {
                     </div>
                   </div>
                 </div>
-
                 <div className="book-card-body">
-                  <h3 className="book-card-title">{b.title}</h3>
-                  <div className="book-card-author">{b.author}</div>
+                  <h3 className="book-card-title">{book.title}</h3>
+                  <div className="book-card-author">{book.author}</div>
                   <div className="book-card-price">
-                    <div className="book-card-price-old">{formatRupiah(b.oldPrice)}</div>
-                    <div className="book-card-price-new">{formatRupiah(b.price)}</div>
+                    <div className="book-card-price-old">{formatRupiah(book.oldPrice)}</div>
+                    <div className="book-card-price-new">{formatRupiah(book.price)}</div>
                   </div>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Ready Stock Section */}
           <section className="ready-stock">
             <div className="ready-stock-header">
               <h2>Buku Tersedia</h2>
               <div className="books-header-line"></div>
             </div>
-
             {currentBook && (
               <div className="ready-book-card">
                 <div className={`ready-book ${animate ? "slide-out" : "slide-in"}`}>
                   <div className="ready-book-cover">
                     <img src={currentBook.cover} alt={currentBook.title} />
                   </div>
-
                   <div className="ready-book-info">
                     <h3 className="ready-book-title">{currentBook.title}</h3>
                     <p className="ready-book-author">Author: {currentBook.author}</p>
@@ -209,16 +214,14 @@ export default function BookPage() {
             )}
           </section>
 
-          {/* FAQ Section */}
           <section className="faq-section">
             <div className="books-header">
               <h2>Frequently Asked Questions</h2>
               <div className="books-header-line"></div>
             </div>
-
             <div className="faq-container">
               {faqs.map((faq, idx) => (
-                <div className="faq-item" key={idx}>
+                <div key={idx} className="faq-item">
                   <button
                     className="faq-question"
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
@@ -226,10 +229,7 @@ export default function BookPage() {
                     <span>{faq.question}</span>
                     <span>{openFaq === idx ? "−" : "+"}</span>
                   </button>
-
-                  {openFaq === idx && (
-                    <div className="faq-answer">{faq.answer}</div>
-                  )}
+                  {openFaq === idx && <div className="faq-answer">{faq.answer}</div>}
                 </div>
               ))}
             </div>
